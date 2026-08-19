@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /private/
+Disallow: /admin/
+
+# Crawl-delay opcional para servidores ligeros
+Crawl-delay: 1
+
+Sitemap: https://mak.bio.co.ve/sitemap.xml
