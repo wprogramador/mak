@@ -71,8 +71,7 @@
       "name": "Venezuela"
     },
     "sameAs": [
-      "https://instagram.com/Makfumigacionesfp",
-      "https://facebook.com/Makfumigacionesfp"
+      "https://www.instagram.com/makfumigaciones/"
     ]
   }
   </script>
@@ -659,7 +658,7 @@
       z-index: 1;
     }
 
-    /* Methods Section - CORREGIDO PARA MÓVIL */
+    /* Methods Section */
     .methods {
       background: var(--gray-900);
       overflow-x: hidden;
@@ -907,6 +906,10 @@
     .coverage-city span {
       color: rgba(255,255,255,0.5);
       font-size: 0.85rem;
+    }
+    /* Ciudades desktop-only: visibles en PC, ocultas en móvil */
+    .coverage-city.desktop-only {
+      display: flex;
     }
 
     /* Contact Section */
@@ -1292,6 +1295,10 @@
       }
       .footer {
         padding: 2rem 1rem;
+      }
+      /* En móvil: ocultar ciudades desktop-only */
+      .coverage-city.desktop-only {
+        display: none !important;
       }
     }
 
@@ -1722,35 +1729,35 @@
             <span>Sede Principal · Edo. Aragua</span>
           </div>
         </div>
-        <div class="coverage-city">
+        <div class="coverage-city desktop-only">
           <span class="city-dot"></span>
           <div>
             <strong>Caracas</strong>
             <span>Distrito Capital</span>
           </div>
         </div>
-        <div class="coverage-city">
+        <div class="coverage-city desktop-only">
           <span class="city-dot"></span>
           <div>
             <strong>Valencia</strong>
             <span>Edo. Carabobo</span>
           </div>
         </div>
-        <div class="coverage-city">
+        <div class="coverage-city desktop-only">
           <span class="city-dot"></span>
           <div>
             <strong>Barquisimeto</strong>
             <span>Edo. Lara</span>
           </div>
         </div>
-        <div class="coverage-city">
+        <div class="coverage-city desktop-only">
           <span class="city-dot"></span>
           <div>
             <strong>Puerto Ordaz</strong>
             <span>Edo. Bolívar</span>
           </div>
         </div>
-        <div class="coverage-city">
+        <div class="coverage-city desktop-only">
           <span class="city-dot"></span>
           <div>
             <strong>Maturín</strong>
@@ -1813,8 +1820,7 @@
         </div>
 
         <div class="social-links">
-          <a href="https://instagram.com/Makfumigacionesfp" class="social-link" target="_blank" title="Instagram" aria-label="Instagram">📷</a>
-          <a href="https://facebook.com/Makfumigacionesfp" class="social-link" target="_blank" title="Facebook" aria-label="Facebook">👍</a>
+          <a href="https://www.instagram.com/makfumigaciones/" class="social-link" target="_blank" title="Instagram" aria-label="Instagram">📷</a>
           <a href="https://wa.me/584125096767" class="social-link" target="_blank" title="WhatsApp" aria-label="WhatsApp">💬</a>
         </div>
       </div>
@@ -1864,7 +1870,7 @@
       <a href="#contacto">Contacto</a>
     </div>
     <p>© 2026 MAK Fumigaciones. Todos los derechos reservados. | Maracay, Edo. Aragua, Venezuela.</p>
-    <p style="margin-top:0.5rem; font-size:0.8rem;">RIF: makfumigacionesfp | Instagram & Facebook: @Makfumigacionesfp</p>
+    <p style="margin-top:0.5rem; font-size:0.8rem;">Instagram: @makfumigaciones | WhatsApp: 0412-509-67-67</p>
   </footer>
 
   <!-- WhatsApp Float -->
