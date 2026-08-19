@@ -271,7 +271,7 @@
       transition: var(--transition);
     }
 
-    /* Hero Section - CORREGIDO */
+    /* Hero Section */
     .hero {
       min-height: 100vh;
       display: flex;
@@ -498,11 +498,14 @@
     section {
       padding: 100px 2rem;
       position: relative;
+      overflow-x: hidden;
     }
     .section-header {
       text-align: center;
       max-width: 700px;
       margin: 0 auto 4rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     .section-tag {
       display: inline-block;
@@ -521,6 +524,8 @@
       font-size: clamp(2rem, 4vw, 3rem);
       margin-bottom: 1rem;
       color: var(--white);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     .section-title span {
       color: var(--orange);
@@ -528,6 +533,8 @@
     .section-desc {
       color: rgba(255,255,255,0.6);
       font-size: 1.1rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
 
     /* Services Section */
@@ -652,9 +659,10 @@
       z-index: 1;
     }
 
-    /* Methods Section */
+    /* Methods Section - CORREGIDO PARA MÓVIL */
     .methods {
       background: var(--gray-900);
+      overflow-x: hidden;
     }
     .methods-container {
       max-width: 1400px;
@@ -663,9 +671,17 @@
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
       align-items: center;
+      overflow-x: hidden;
+    }
+    .methods-content {
+      max-width: 100%;
+      overflow-wrap: break-word;
+      word-wrap: break-word;
     }
     .methods-visual {
       position: relative;
+      max-width: 100%;
+      overflow-x: hidden;
     }
     .method-showcase {
       background: linear-gradient(135deg, var(--gray-800), var(--black));
@@ -674,6 +690,7 @@
       border: 1px solid rgba(249,115,22,0.1);
       position: relative;
       overflow: hidden;
+      max-width: 100%;
     }
     .method-showcase::before {
       content: '';
@@ -695,6 +712,7 @@
       border: 1px solid rgba(255,255,255,0.05);
       transition: var(--transition);
       cursor: pointer;
+      max-width: 100%;
     }
     .method-item:hover, .method-item.active {
       background: rgba(249,115,22,0.1);
@@ -717,17 +735,27 @@
       flex-shrink: 0;
       transition: var(--transition);
     }
+    .method-info {
+      min-width: 0;
+      flex: 1;
+    }
     .method-info h4 {
       font-size: 1.1rem;
       margin-bottom: 0.3rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     .method-info p {
       font-size: 0.85rem;
       color: rgba(255,255,255,0.5);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     .methods-content h2 {
       font-size: clamp(1.8rem, 3vw, 2.5rem);
       margin-bottom: 1.5rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     .methods-content h2 span {
       color: var(--orange);
@@ -736,6 +764,8 @@
       color: rgba(255,255,255,0.6);
       margin-bottom: 2rem;
       font-size: 1.05rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     .eco-badge {
       display: inline-flex;
@@ -746,6 +776,9 @@
       padding: 1rem 1.5rem;
       border-radius: 16px;
       margin-top: 2rem;
+      max-width: 100%;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     .eco-badge span {
       color: #4ADE80;
@@ -879,6 +912,7 @@
     /* Contact Section */
     .contact {
       background: var(--gray-900);
+      overflow-x: hidden;
     }
     .contact-container {
       max-width: 1400px;
@@ -886,10 +920,13 @@
       display: grid;
       grid-template-columns: 1fr 1fr;
       gap: 4rem;
+      overflow-x: hidden;
     }
     .contact-info h2 {
       font-size: 2.5rem;
       margin-bottom: 1rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     .contact-info h2 span {
       color: var(--orange);
@@ -898,6 +935,8 @@
       color: rgba(255,255,255,0.6);
       margin-bottom: 2.5rem;
       font-size: 1.1rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     .contact-item {
       display: flex;
@@ -909,6 +948,7 @@
       border-radius: 16px;
       border: 1px solid rgba(255,255,255,0.05);
       transition: var(--transition);
+      max-width: 100%;
     }
     .contact-item:hover {
       background: rgba(249,115,22,0.05);
@@ -935,6 +975,8 @@
       color: rgba(255,255,255,0.6);
       text-decoration: none;
       transition: var(--transition);
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     .contact-item div a:hover {
       color: var(--orange);
@@ -943,6 +985,7 @@
       display: flex;
       gap: 1rem;
       margin-top: 2rem;
+      flex-wrap: wrap;
     }
     .social-link {
       width: 50px;
@@ -969,6 +1012,7 @@
       padding: 3rem;
       border-radius: 24px;
       border: 1px solid rgba(255,255,255,0.05);
+      max-width: 100%;
     }
     .contact-form h3 {
       font-size: 1.5rem;
@@ -1037,6 +1081,7 @@
       border-top: 1px solid rgba(255,255,255,0.05);
       padding: 3rem 2rem;
       text-align: center;
+      overflow-x: hidden;
     }
     .footer-logo {
       display: flex;
@@ -1044,6 +1089,7 @@
       justify-content: center;
       gap: 1rem;
       margin-bottom: 1.5rem;
+      flex-wrap: wrap;
     }
     .footer-logo img {
       height: 60px;
@@ -1057,6 +1103,8 @@
     .footer p {
       color: rgba(255,255,255,0.4);
       font-size: 0.9rem;
+      word-wrap: break-word;
+      overflow-wrap: break-word;
     }
     .footer-links {
       display: flex;
@@ -1184,10 +1232,10 @@
         transform: rotate(-45deg) translate(6px, -6px);
       }
       section {
-        padding: 60px 1.5rem;
+        padding: 60px 1rem;
       }
       .hero {
-        padding: 120px 1.5rem 60px;
+        padding: 120px 1rem 60px;
       }
       .hero-logo-img {
         width: 220px;
@@ -1215,7 +1263,35 @@
         font-size: 0.7rem;
       }
       .contact-form {
-        padding: 2rem 1.5rem;
+        padding: 2rem 1.2rem;
+      }
+      .method-showcase {
+        padding: 2rem 1.2rem;
+      }
+      .method-item {
+        padding: 1.2rem;
+        gap: 1rem;
+      }
+      .method-icon {
+        width: 44px;
+        height: 44px;
+        font-size: 1.3rem;
+      }
+      .eco-badge {
+        padding: 0.8rem 1.2rem;
+        font-size: 0.9rem;
+      }
+      .plaga-card {
+        padding: 1.5rem;
+      }
+      .service-card {
+        padding: 1.8rem;
+      }
+      .coverage-city {
+        padding: 1rem;
+      }
+      .footer {
+        padding: 2rem 1rem;
       }
     }
 
@@ -1236,6 +1312,19 @@
       .hero-logo-ring {
         width: 240px;
         height: 240px;
+      }
+      .btn-primary, .btn-secondary {
+        padding: 0.85rem 1.8rem;
+        font-size: 0.95rem;
+      }
+      .section-title {
+        font-size: 1.7rem;
+      }
+      .methods-content h2 {
+        font-size: 1.6rem;
+      }
+      .contact-info h2 {
+        font-size: 1.8rem;
       }
     }
   </style>
